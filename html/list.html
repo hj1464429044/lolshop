@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>商品列表-英雄联盟周边商城</title><link rel="icon" href="https://js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/list.css"></head><body><header></header><div class="main"><div class="contents"></div><div class="ad" id="ad"><a href="javascript:;"><img src="" alt=""></a></div><div class="goods"><div class="sidebar"><div class="product-list"><dl class="navlist nav"><dt class="cur"><i></i> <span class="tit">雕塑手办</span></dt></dl></div><dl class="navlist"><dt class="cur"><i></i> <span>价格</span></dt><dd><a href="">100-300元</a></dd><dd><a href="">300元以上</a></dd></dl><dl class="navlist"><dt class="cur"><i></i> <span>英雄</span></dt><dd><a href="">上单</a></dd><dd><a href="">中单</a></dd><dd><a href="">ADC</a></dd><dd><a href="">辅助</a></dd><dd><a href="">打野</a></dd><dd><a href="">坦克</a></dd><dd><a href="">法师</a></dd><dd><a href="">射手</a></dd><dd><a href="">刺客</a></dd></dl></div><div class="shopcont"><div class="shop-action"><div class="sort"><div class="box"><span>人气</span> <i></i></div><ul class="sort-list"><li>人气</li><li>销量</li><li>新品</li><li>价格升序</li><li>价格降序</li></ul></div><div class="filter"><i></i> <span>仅显示有货</span></div><div class="pagelist"><span class="prevpage"><a href="">上一页</a></span><div class="num num1"></div><span class="nextpage"><a href="">下一页</a></span></div></div><div class="goods-list"><ul id="goods-list"></ul><script type="text/html" id="goods-listTemplate">{{each lists good}}
+                            <li class="everygood">
+                                <i></i>
+                                <a href="/html/detail.html?id={{good.goodid}}" target="_blank">
+                                    <div class="new">
+                                        <img src={{good.ltimg}} alt="">
+                                    </div>
+                                    <div class="good-img">
+                                        <img src={{good.frontimg}} alt="">
+                                    </div>
+                                    <div class="hover-img">
+                                        <img src={{good.hoverimg}} alt="">
+                                    </div>
+                                </a>
+                                <p class="title">{{good.title}}</p>
+                                <p class="price">¥{{good.price}}</p>
+                            </li>
+                        {{/each}}</script><div class="shop-action"><div class="pagelist"><span class="prevpage"><a href="">上一页</a></span><div class="num num2"></div><span class="nextpage"><a href="">下一页</a></span></div></div></div></div></div></div><footer></footer><div class="kefu" id="kefu"></div><script src="/libs/require/require.js" data-main="/js/list.js"></script></body></html>

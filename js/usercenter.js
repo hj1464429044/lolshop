@@ -1,0 +1,1 @@
+"use strict";function _classCallCheck(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}require(["./config"],function(){require(["template","header","footer","kefu"],function(e,n){new function e(){_classCallCheck(this,e)}})});

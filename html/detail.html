@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>商品详情-英雄联盟周边商城</title><link rel="icon" href="https://js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/detail.css"></head><body><header></header><div class="main"><div class="contents"><a href="/index.html" class="index">商城首页</a> <i></i> <a href="javascript:;">雕塑手办</a></div><div class="detailbar" id="detailinfo"></div><script type="text/html" id="detailinfoTemplate"><div class="container">
+                    <div class="bigbox">
+                        <div class="bigimg">
+                            <div class="depic">
+                                <img src="{{details.baseimg[0]}}" class="zoom-image" data-zoom-image="{{details.baseimg[0]}}">
+                                <div class="imgs">
+                                    <ul id="gal1">
+                                        {{each details.baseimg baseimg}}
+                                            <li>
+                                                <a class="" href="javascript:;" data-image="{{baseimg}}"
+                                                    data-zoom-image="{{baseimg}}">
+                                                    <img src="{{baseimg}}" class="smallpic">
+                                                </a>
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="detailinfo">
+                            <h3 class="title">{{title}}</h3>
+                            <div class="desc">{{details.desc}}</div>
+                            <div class="yfk">
+                                <div class="pt"></div>
+                                <div class="price">
+                                    <span class="payall">全款：</span>
+                                    <span class="jiage">￥<span>{{price}}</span></span>
+                                </div>
+                            </div>
+                            <div class="presell">
+                                <i class="ico-sell"></i>
+                                <span class="pre-sell">{{details.status}}</span>
+                                <i class="nowpre-sell"></i>
+                                <span class="prenum">
+                                    已预售
+                                    <span>{{details.sale}}</span>
+                                    件
+                                </span>
+                                <i class="clock"></i>
+                                <span class="remain">
+                                    预售剩余
+                                    <span class="time">{{details.time}}</span>
+                                </span>
+                            </div>
+                            <div class="sellnum">
+                                <span class="latest">最近销量</span>
+                                <span class="amount1">{{details.sale}}</span>
+                            </div>
+                            <div class="details">
+                                <div class="guige">
+                                    <span class="spec">规格：</span>
+                                    <span class="guigelist">
+                                        <ul>
+                                            {{each details.guige guige}}
+                                                <li><a class="click">{{guige}}</a></li>
+                                            {{/each}}
+                                        </ul>
+                                    </span>
+                                </div>
+                                <div class="yanse">
+                                    <span class="color">颜色：</span>
+                                    <span class="colorlist">
+                                        <ul>
+                                            {{each details.color color}}
+                                                <li><a class="click">{{color}}</a></li>
+                                            {{/each}}
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div class="buynum">
+                                    <span class="shuliang">数量：</span>
+                                    <span class="redbtn">
+                                        <a href="" class="reduce">-</a>
+                                    </span>
+                                    <span class="count">
+                                        <input type="text" class="num" value="1" maxlength="3">
+                                    </span>
+                                    <span class="addbtn">
+                                        <a href="" class="add">+</a>
+                                    </span>
+                                    <span class="kucun">({{details.kucun}})</span>
+                                </div>
+                                <div class="buybtn">
+                                    <span>
+                                        <a href="/html/pay.html" target="_blank" class="btn">立即购买</a>
+                                    </span>
+                                    <span>
+                                        <a class="btn" id="add-to-cart-btn" style="background-color: #00a989">加入购物车</a>
+                                    </span>
+                                    <div class="like">
+                                        <a href="">收藏宝贝</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <ul>
+                                    <li class="pregood">
+                                        <span></span>
+                                        <a href="">预售商品</a>
+                                    </li>
+                                    <li class="zhengpin">
+                                        <span></span>
+                                        <a href="">100%官方正品</a>
+                                    </li>
+                                    <li class="baoyou">
+                                        <span></span>
+                                        <a href="">全场每单满299元包邮</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_tab">
+                    <ul>
+                        <li class="choose">商品详情</li>
+                        <li>
+                            用户点评(
+                            <span>0</span>
+                            )
+                        </li>
+                        <li>售后服务</li>
+                    </ul>
+                </div>
+                <div class="detailbox">
+                    {{each details.detailimg detimg}}
+                        <p>
+                            <img src="{{detimg}}" alt="">
+                        </p>
+                    {{/each}}
+                </div>
+            </div></script><footer></footer><div class="kefu" id="kefu"></div><script src="/libs/require/require.js" data-main="/js/detail.js"></script></div></body></html>

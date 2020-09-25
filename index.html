@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>首页-英雄联盟周边商城</title><link rel="icon" href="https://js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/libs/swiper/css/swiper.min.css"><link rel="stylesheet" href="/css/index.css"></head><body><header></header><div class="main"><div class="swiper-container banner"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://game.gtimg.cn/images/daojushop/zb/ad/202009/20200904094038_710198.jpg" alt=""></div><div class="swiper-slide"><img src="https://game.gtimg.cn/images/daojushop/zb/ad/202008/20200830215942_191704.jpg" alt=""></div><div class="swiper-slide"><img src="https://game.gtimg.cn/images/daojushop/zb/ad/202009/20200902201623_484194.jpg" alt=""></div><div class="swiper-slide"><img src="https://game.gtimg.cn/images/daojushop/zb/ad/202006/20200628183140_122065.jpg" alt=""></div></div><div class="swiper-pagination"></div></div><ul class="shoplist" id="shoplist"></ul><script type="text/html" id="shoplistTemplate">{{each shop good}}
+                <li>
+                    <a target="_blank" href="/html/detail.html?id={{good.id}}">
+                        <img src="{{good.img}}" width="480" height="300" alt="首页推荐广告位">
+                    </a>
+                    <p class="shop-title">{{good.title}}</p>
+                </li>
+                {{/each}}</script></div><footer></footer><div class="kefu" id="kefu"></div><script src="/libs/require/require.js" data-main="/js/index.js"></script></body></html>

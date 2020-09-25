@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>购物车-英雄联盟周边商城</title><link rel="icon" href="https://js01.daoju.qq.com/zb/lolriotmall/pc/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/shopping.css"></head><body><header></header><div class="main"><div class="cartlist"><div class="shopping" id="shopping_car"><table cellspacing="0" cellpadding="0"><thead class="nav_shop"><tr><th width="160px"><a href="javascript:;" id="edit">全选</a> <input type="checkbox" id="all-check"></th><th width="310px">商品名称</th><th width="90px">单价(元)</th><th width="200px">数量</th><th width="200px">小计</th><th width="200px">操作</th></tr></thead><tbody class="shop_cont" id="shop_tbody"></tbody><tfoot class="shop_submit"><tr><td width="190px"><input type="checkbox" id="selectAllBox" checked><p id="All"><a href="javaScript:;" id="clearAll">删除/</a> <a href="javaScript:;" id="cancel">取消编辑</a></p></td><td width="800px"><span>商品应付金额：</span> <em>￥</em> <span id="Paymoney"></span></td><td width="180px"><a href="/html/pay.html" target="_blank" id="indent">去结算</a></td><td width="300px"><a href="javascript:;" id="clear">清空购物车</a></td></tr></tfoot></table><script type="text/html" id="shop_tbody_template">{{each cart shop}}
+            <tr data-id="{{shop.goodid}}">
+              <td class="ck">
+                  <label class="check-label">
+                    <input type="checkbox" class="checks" {{shop.check ? 'checked' : ''}} />
+                    <span class="check-span">
+                      <span class="check-item"></span>
+                    </span>
+                  </label>
+                </td>
+                <td>
+                  <a href="/html/detail.html">
+                    <img src="{{shop.frontimg}}" alt="">
+                  </a>
+                  <span>{{shop.title.slice(0,20)}}...</span>
+                </td>
+                <td>￥{{shop.price.toFixed(2)}}元</td>
+                <td>
+                  <a href="javaScript:;" class="minus">-</a>
+                  <input type="text" class="amount" value="{{shop.count}}">
+                  <a href="javaScript:;" class="plus">+</a>
+                </td>
+                
+                <td>￥{{(shop.count*shop.price).toFixed(2)}}</td>
+                <td>
+                    <span class="del">删除</span>
+                    <span>收藏</span>
+                </td>
+            </tr>
+          {{/each}}</script></div><div class="empty" id="cart-empty"><p><i class="iconfont">&#xe618;</i>您的购物车还没有商品!</p><a href="/">返回首页</a> <a href="/html/list.html?id=1">去逛逛吧</a></div></div><footer></footer><div class="kefu" id="kefu"></div><script src="/libs/require/require.js" data-main="/js/shopping.js"></script></div></body></html>
